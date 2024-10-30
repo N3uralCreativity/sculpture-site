@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Sculpture by [Artist Name]</title>
+      <link rel="stylesheet" href="styles.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+      <script>
+         document.addEventListener('DOMContentLoaded', function() {
+             const elements = document.querySelectorAll('.hero, .about, .gallery, .gallery-item, .technique, .expositions, .exposition-item');
+             const scrollTrigger = window.innerHeight / 1.3;
+         
+             function checkScroll() {
+                 elements.forEach(element => {
+                     const elementTop = element.getBoundingClientRect().top;
+                     if (elementTop < scrollTrigger) {
+                         element.style.opacity = '1';
+                         element.style.transform = 'translateY(0)';
+                     }
+                 });
+             }
+         
+             window.addEventListener('scroll', checkScroll);
+             checkScroll(); // Initial check to reveal elements already in view
+         });
+      </script>
+   </head>
+   <header class="top-nav">
+      <nav>
+          <a href="#home">Acceuil</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#expositions">Expositions</a>
+      </nav>
+  </header>
+   <body>
+      <!-- Hero Section -->
+      <section class="hero">
+         <div class="hero-content">
+            <h1>Sculpture by [Artist Name]</h1>
+            <p>Capturing the essence of life through form and texture.</p>
+            <a href="#about" class="hero-button">Discover More</a>
+         </div>
+      </section>
+      <!-- About Section -->
+      <section id="about" class="about">
+         <div class="about-content">
+            <h2>About the Artist</h2>
+            <p>[Artist Name] started sculpting at a young age, driven by a passion for turning simple materials into extraordinary works of art. From small clay figurines to large bronze statues, the journey has been one of dedication, experimentation, and love for art.</p>
+            <p>Today, [Artist Name] is known for intricate details and the ability to tell a story through each piece. Explore the gallery below to see some of the notable sculptures and learn about their history.</p>
+         </div>
+      </section>
+      <!-- Gallery Section -->
+      <section class="gallery">
+         <h2>Gallery</h2>
+         <div class="gallery-grid">
+            <div class="gallery-item">
+               <img src="Images/Gallery1.webp" alt="Sculpture 1">
+               <p>"The Awakening" - Bronze, 2019</p>
+            </div>
+            <div class="gallery-item">
+               <img src="Images/Gallery2.webp" alt="Sculpture 2">
+               <p>"Resilience" - Marble, 2021</p>
+            </div>
+            <div class="gallery-item">
+               <img src="Images/Gallery3.webp" alt="Sculpture 3">
+               <p>"Harmony in Motion" - Wood, 2022</p>
+            </div>
+         </div>
+      </section>
+      <!-- Technique Section -->
+      <section class="technique">
+         <h2>The Technique</h2>
+         <div class="technique-content">
+            <p>From sketching out initial designs to working with various mediums like clay, marble, and bronze, [Artist Name] follows a meticulous process that breathes life into each sculpture. The use of traditional tools combined with modern methods ensures each piece remains unique and timeless.</p>
+         </div>
+      </section>
+      <!-- Exposition Section -->
+      <section class="expositions">
+         <h2>Upcoming Expositions</h2>
+         <div class="expositions-list">
+            <div class="exposition-item">
+               <h3>Exposition: "Art in Motion"</h3>
+               <p>Date: June 15, 2025</p>
+               <p>Location: The Grand Art Gallery, Paris</p>
+               <a href="#" class="reserve-button">Reserve Your Spot</a>
+            </div>
+            <div class="exposition-item">
+               <h3>Exposition: "The Form of Nature"</h3>
+               <p>Date: August 20, 2025</p>
+               <p>Location: Art & Sculpture Museum, Berlin</p>
+               <a href="#" class="reserve-button">Reserve Your Spot</a>
+            </div>
+         </div>
+      </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 [Artist Name]. All Rights Reserved.</p>
+        <div class="language-switch">
+            <label for="language-select">Language: </label>
+            <select id="language-select" onchange="changeLanguage()">
+                <option value="en">English</option>
+                <option value="fr">French</option>
+            </select>
+        </div>
+    </footer>
+
+    <script>
+        function changeLanguage() {
+            const language = document.getElementById('language-select').value;
+            if (language === 'fr') {
+                window.location.href = 'index_fr.html';
+            } else {
+                window.location.href = 'index.html';
+            }
+        }
+    </script>
+
+<script>
+   document.addEventListener('DOMContentLoaded', function() {
+       const navBar = document.querySelector('.top-nav');
+       const heroSection = document.querySelector('.hero');
+
+       function handleScroll() {
+           // Trigger the change when halfway through the hero section
+           if (window.scrollY > heroSection.offsetHeight / 3 - navBar.offsetHeight) {
+               navBar.classList.add('scrolled');
+           } else {
+               navBar.classList.remove('scrolled');
+           }
+       }
+
+       window.addEventListener('scroll', handleScroll);
+       handleScroll(); // Initial check for page load
+   });
+</script>
+
+
+   </body>
+</html>

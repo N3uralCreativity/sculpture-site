@@ -10,7 +10,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background-image: url('Images/Hero1.webp');
+    background-image: url('images/Hero1.webp');
     background-size: cover;
     background-position: center;
     height: 100vh;

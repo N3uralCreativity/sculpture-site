@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie des Sculptures</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="top-nav">
+    <nav>
+        <a href="index_fr.html">Acceuil</a>
+        <a href="Gallerie.html" class="active">Gallerie</a>
+        <a href="index_fr.html#expositions">Expositions</a>
+    </nav>
+</header>
+
+<section class="gallery">
+    <h2>Galerie des Sculptures</h2>
+    <div class="gallery-grid">
+        <!-- Sculpture Template 1 -->
+        <div class="gallery-item">
+            <img src="Images/SculptureTemplate.webp" alt="Sculpture 1">
+            <p> #Nom, #Description</p>
+        </div>
+        
+        <!-- Sculpture Template 2 -->
+        <div class="gallery-item">
+            <img src="Images/SculptureTemplate.webp" alt="Sculpture 2">
+            <p> #Nom, #Description</p>
+        </div>
+        
+        <!-- Sculpture Template 3 -->
+        <div class="gallery-item">
+            <img src="Images/SculptureTemplate.webp" alt="Sculpture 3">
+            <p> #Nom, #Description</p>
+        </div>
+        
+        <!-- Sculpture Template 4 -->
+        <div class="gallery-item">
+            <img src="Images/SculptureTemplate.webp" alt="Sculpture 4">
+            <p> #Nom, #Description</p>
+        </div>
+        
+        <!-- Sculpture Template 5 -->
+        <div class="gallery-item">
+            <img src="Images/SculptureTemplate.webp" alt="Sculpture 5">
+            <p> #Nom, #Description</p>
+        </div>
+
+        <!-- Sculpture Template 6 -->
+        <div class="gallery-item">
+            <img src="Images/SculptureTemplate.webp" alt="Sculpture 6">
+            <p> #Nom, #Description</p>
+        </div>
+
+        <!-- Sculpture Template 7 -->
+        <div class="gallery-item">
+            <img src="Images/SculptureTemplate.webp" alt="Sculpture 7">
+            <p> #Nom, #Description</p>
+        </div>
+
+        <!-- Sculpture Template 8 -->
+        <div class="gallery-item">
+            <img src="Images/SculptureTemplate.webp" alt="Sculpture 8">
+            <p> #Nom, #Description</p>
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer">
+    <p>&copy; 2024 [Nom de l'Artiste]. Tous droits réservés.</p>
+    <!--<div class="language-switch">
+        <label for="language-select">Langue : </label>
+        <select id="language-select" onchange="changeLanguage()">
+            <option value="en">Anglais</option>
+            <option value="fr" selected>Français</option>
+        </select>
+    </div>-->
+</footer>
+
+<script>
+    function changeLanguage() {
+        const language = document.getElementById('language-select').value;
+        if (language === 'fr') {
+            window.location.href = 'Gallerie.html';
+        } else {
+            window.location.href = 'Gallery.html';
+        }
+    }
+</script>
+
+</body>
+</html>

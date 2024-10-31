@@ -1,0 +1,78 @@
+/* General Gallery Section Styling */
+.gallery {
+    padding: 4rem 2rem;
+    text-align: center;
+    transition: none;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+/* Ensure the top-nav background is always visible on the Gallery page */
+.top-nav {
+    background-color: #333; /* Use a solid color for visibility */
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for depth */
+}
+
+.gallery h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Grid Layout for Sculptures */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+/* Individual Gallery Item Styling */
+.gallery-item {
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    animation-delay: 0.3s;
+}
+
+/* Image Styling */
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Text Styling */
+.gallery-item p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Hover Effect for Gallery Items */
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Ensure gallery items are immediately visible */
+.gallery, .gallery-item {
+    opacity: 1; /* Make elements fully visible */
+    transform: translateY(0); /* Remove any translation */
+}
+
+
+/* Fade-in animation keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
